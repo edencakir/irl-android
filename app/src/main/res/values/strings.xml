@@ -6,4 +6,5 @@
     <string name="title_activity_news">NewsActivity</string>
     <string name="title_activity_details">DetailsActivity</string>
     <string name="title_activity_contact">ContactActivity</string>
+    <string name="title_activity_rules">RulesActivity</string>
 </resources>
