@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import tr.edu.iyte.irl.irl.CategoryDetailsActivity;
 import tr.edu.iyte.irl.irl.NewsDetailsActivity;
 import tr.edu.iyte.irl.irl.R;
 import tr.edu.iyte.irl.irl.Utility.Constants;
@@ -45,7 +46,7 @@ public class CategoriesFragment extends Fragment implements View.OnClickListener
     }
 
     private void initialize() {
-        detailActivity = new Intent(getActivity(), NewsDetailsActivity.class);
+        detailActivity = new Intent(getActivity(), CategoryDetailsActivity.class);
     }
 
     private void setListeners() {
