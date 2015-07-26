@@ -1,17 +1,40 @@
 package tr.edu.iyte.irl.irl;
 
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.astuetz.PagerSlidingTabStrip;
 
-public class NewsActivity extends AppCompatActivity {
+import tr.edu.iyte.irl.irl.Adapters.BaseFragmentPagerAdapter;
+
+// which contains viewpager, and base to categories and news
+public class BaseActivity extends AppCompatActivity {
+    private ViewPager viewPager;
+    private PagerSlidingTabStrip tabStrip;
+    private BaseFragmentPagerAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_news);
+        setContentView(R.layout.activity_base);
+
+        findViews();
+        initialize();
+    }
+
+    private void findViews() {
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
+        tabStrip = (PagerSlidingTabStrip) findViewById(R.id.tabs);
+    }
+
+    private void initialize() {
+        adapter = new BaseFragmentPagerAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(adapter);
+        tabStrip.setViewPager(viewPager);
+        //set fonts for tabs here.
     }
 
     @Override
