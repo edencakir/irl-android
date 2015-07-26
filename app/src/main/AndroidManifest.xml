@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="tr.edu.iyte.irl.irl" >
 
+    <!-- TODO: add logo mipmap, change app name, add map for directions -->
+    <!-- TODO: fix contact activity, add strings -->
     <application
+        android:name=".Utility.AppController"
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"

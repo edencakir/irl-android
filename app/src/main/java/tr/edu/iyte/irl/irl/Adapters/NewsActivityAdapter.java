@@ -8,12 +8,14 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import tr.edu.iyte.irl.irl.Model.NewsItem;
+
 /**
  * Created by Enes on 7/24/15.
  */
 public class NewsActivityAdapter extends RecyclerView.Adapter<NewsActivityAdapter.ViewHolder> {
     private Context context;
-    private ArrayList<String> data;
+    private ArrayList<NewsItem> items;
 
     //create constructor for adapter here.
 

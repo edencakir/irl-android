@@ -1,5 +1,6 @@
 package tr.edu.iyte.irl.irl;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -28,6 +29,8 @@ public class BaseActivity extends AppCompatActivity {
     private void findViews() {
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         tabStrip = (PagerSlidingTabStrip) findViewById(R.id.tabs);
+
+        tabStrip.setIndicatorColor(getResources().getColor(R.color.irl_blue));
     }
 
     private void initialize() {
