@@ -10,14 +10,16 @@ import android.view.MenuItem;
 import tr.edu.iyte.irl.irl.Utility.Constants;
 
 
-public class DetailsActivity extends AppCompatActivity {
+public class CategoryDetailsActivity extends AppCompatActivity {
+
     //buralari hardcoded yapmak beni her ne kadar uzse de
     //network requestler databaseler icinde bogulmayip (zaman darligi)
     //islevsel bir uygulama cikarmak amaciyla
     //bu sekilde kotu bir kod yazdim.
     private int selection;
 
-    // selection durumuna gore string-arrayden texti cekiyor gerekli yerlere koyuyorum.
+    // selection durumuna gore string-arrayden texti cekiyor gerekli
+    // yerlere koyuyorum.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +61,7 @@ public class DetailsActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_details, menu);
+        getMenuInflater().inflate(R.menu.menu_rules, menu);
         return true;
     }
 

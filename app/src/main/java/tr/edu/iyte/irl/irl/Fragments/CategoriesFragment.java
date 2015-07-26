@@ -1,6 +1,5 @@
 package tr.edu.iyte.irl.irl.Fragments;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,9 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import tr.edu.iyte.irl.irl.DetailsActivity;
+import tr.edu.iyte.irl.irl.NewsDetailsActivity;
 import tr.edu.iyte.irl.irl.R;
-import tr.edu.iyte.irl.irl.RulesActivity;
 import tr.edu.iyte.irl.irl.Utility.Constants;
 
 /**
@@ -47,7 +45,7 @@ public class CategoriesFragment extends Fragment implements View.OnClickListener
     }
 
     private void initialize() {
-        detailActivity = new Intent(getActivity(), DetailsActivity.class);
+        detailActivity = new Intent(getActivity(), NewsDetailsActivity.class);
     }
 
     private void setListeners() {

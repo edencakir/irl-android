@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DetailsActivity"
+            android:name=".NewsDetailsActivity"
             android:label="@string/title_activity_details" >
         </activity>
         <activity
@@ -29,7 +29,7 @@
             android:label="@string/title_activity_contact" >
         </activity>
         <activity
-            android:name=".RulesActivity"
+            android:name=".CategoryDetailsActivity"
             android:label="@string/title_activity_rules" >
         </activity>
     </application>
