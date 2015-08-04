@@ -12,7 +12,7 @@ import tr.edu.iyte.irl.irl.Fragments.TransportFragment;
  * Created by Enes on 7/26/15.
  */
 public class BaseFragmentPagerAdapter extends FragmentPagerAdapter {
-    private String[] pageTitles = {"Duyurular", "Kategoriler", "Ulasim"};
+    private String[] pageTitles = {"Duyurular", "Kategorİler ", "Ulaşım"};
 
     public BaseFragmentPagerAdapter(FragmentManager fm) {
         super(fm);

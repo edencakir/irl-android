@@ -45,7 +45,7 @@
             android:layout_marginBottom="5dp"
             android:layout_marginTop="10dp"
             android:paddingLeft="10dp"
-            android:text="Üçkuyular IYTE Arası Ulaşım"
+            android:text="Üçkuyular İYTE Arası Ulaşım"
             android:textColor="@color/irl_blue"
             android:textSize="25sp" />
 
@@ -56,7 +56,7 @@
             android:layout_below="@id/title2"
             android:layout_marginBottom="10dp"
             android:paddingLeft="10dp"
-            android:text="*Üçkuyular ilçe terminalinden 735 numarali seferiyle\n*Urla/IYTE minibüsleriyle Enstitümüze ulaşabilirsiniz."
+            android:text="*Üçkuyular ilçe terminalinden 735 numarali seferiyle\n*Urla/İYTE minibüsleriyle Enstitümüze ulaşabilirsiniz."
             android:textSize="15sp" />
 
     </RelativeLayout>
