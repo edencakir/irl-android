@@ -6,12 +6,13 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import tr.edu.iyte.irl.irl.Fragments.CategoriesFragment;
 import tr.edu.iyte.irl.irl.Fragments.NewsFragment;
+import tr.edu.iyte.irl.irl.Fragments.TransportFragment;
 
 /**
  * Created by Enes on 7/26/15.
  */
 public class BaseFragmentPagerAdapter extends FragmentPagerAdapter {
-    private String[] pageTitles = {"Duyurular", "Kategoriler"};
+    private String[] pageTitles = {"Duyurular", "Kategoriler", "Ulasim"};
 
     public BaseFragmentPagerAdapter(FragmentManager fm) {
         super(fm);
@@ -29,12 +30,14 @@ public class BaseFragmentPagerAdapter extends FragmentPagerAdapter {
                 return new NewsFragment();
             case 1:
                 return new CategoriesFragment();
+            case 2:
+                return new TransportFragment();
         }
         return null;
     }
 
     @Override
     public int getCount() {
-        return 2;
+        return 3;
     }
 }

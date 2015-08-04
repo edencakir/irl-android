@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/map"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+        <TextView
+            android:id="@+id/title1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/map"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:text="Üçkuyulara Ulaşım"
+            android:textColor="@color/irl_blue"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/description1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title1"
+            android:paddingLeft="10dp"
+            android:text="*İzmir otogardan otobüs firmalarının ücretsiz servislerini\n*Havaalanında ulaşım için 202 numaralı otobüs seferini\n*Basmane tren garından ulaşım için 581 numaralı otobüs seferini\n*Alsancak tren garından ulaşım için 12 numarali otobüs seferini kullanabilirsiniz."
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/title2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/description1"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:text="Üçkuyular IYTE Arası Ulaşım"
+            android:textColor="@color/irl_blue"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/description2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title2"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="10dp"
+            android:text="*Üçkuyular ilçe terminalinden 735 numarali seferiyle\n*Urla/IYTE minibüsleriyle Enstitümüze ulaşabilirsiniz."
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+</ScrollView>

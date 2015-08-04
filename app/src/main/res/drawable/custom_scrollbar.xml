@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?><!-- TODO: CHECK THE SCROLLBAR COLOR -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <gradient
+        android:angle="45"
+        android:centerColor="#555"
+        android:endColor="#555"
+        android:startColor="#555" />
+
+    <corners android:radius="8dp" />
+    <size android:width="4dp" />
+    <padding
+        android:left="0.5dp"
+        android:right="1dp" />
+
+</shape>

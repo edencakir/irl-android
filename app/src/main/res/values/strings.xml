@@ -8,20 +8,20 @@
     <string name="title_activity_contact">ContactActivity</string>
     <string name="title_activity_rules">RulesActivity</string>
 
-    <string-array name="category-title">
+    <string-array name="category_title">
         <item>Cizgi Izleyen</item>
         <item>Sumo</item>
     </string-array>
-    <string-array name="category-definition">
+    <string-array name="category_definition">
         <item>Robotların siyah pist üzerindeki beyaz çizgiyi izleyerek pisti en kısa sürede tamamlama yarışıdır.</item>
     </string-array>
-    <string-array name="category-robot-info">
+    <string-array name="category_robot_info">
         <item>Robotlar otonom olmak zorundadır. Herhangi bir kablolu/kablosuz cihazla kontrol edilemez. Robotlarda herhangi bir sınırlama yoktur. Ancak pist özellikleri göz önüne alınarak tasarlanmalıdır. Yarışmacılar yarış öncesinde robotlarını tasarlamak veya robotlar üzerinde değişiklik yapmak için gerekli ekipmanları kendileri sağlamalıdırlar.Araçlarda piste veya izleyicilere zarar vermeyecek şekilde her türlü enerji kaynağı kullanılabilir.</item>
     </string-array>
-    <string-array name="category-track-info">
+    <string-array name="category_track_info">
         <item>Yarışma iki robotun aynı anda başlayıp, belli bir yolu kattedikten sonra, tek bir yolda birleşenbir pist üzerinde, eleme şeklinde gerçekleştirilecektir. 40 cm genişliğinde siyah mat mdf üzerine beyazelektrik bandı ile şerit çekilmiştir. Pistten çıkan robotlara "1 numaralı ceza" uygulanacaktır. Pistte eğimler, engebeler ve yokuşlar vardır. Bu nedenle motorların çok güçsüz olmamasını tavsiye ederiz. Buralarda alınan cezalar "2 numaralı ceza" kategorisinde değerlendirilecektir.Pistin bir kısmında normal yolun zıt renklerinde yol olacaktır.Bu yolun girişini haber vermek için kestirmenin girişinden (beyaz çizginin siyaha döndüğü noktadan) yaklaşık 500mm önce 100mm arayla iki çizgi bulunmaktadır. Pistin bazı kısımlarında kopuk şeritler vardır. Bu şeritlerde alınan cezalar "2 numaralı ceza" kategorisinde değerlendirilecektir.</item>
     </string-array>
-    <array name="category-rules">
+    <array name="category_rules">
         <item>
             <string-array name="cizgi">
                 <item>Yarışacak robotların sırası ve eşleşmeleri yarışma günü kura ile kararlaştırılacak ve ilan edilecektir.</item>
