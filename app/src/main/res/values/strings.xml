@@ -29,4 +29,5 @@
             </string-array>
         </item>
     </array>
+    <string name="title_activity_scan_result">ScanResultActivity</string>
 </resources>

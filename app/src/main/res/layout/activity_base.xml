@@ -11,18 +11,32 @@
         android:background="@color/white"
         android:minHeight="?attr/actionBarSize">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center">
+            android:layout_height="50dp">
 
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="100dp"
+                android:layout_marginRight="100dp"
+                android:layout_toLeftOf="@+id/buttonQR"
+                android:layout_toStartOf="@+id/buttonQR"
                 android:src="@drawable/logo" />
-        </LinearLayout>
+
+            <ImageView
+                android:id="@+id/buttonQR"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:padding="4dp"
+                android:src="@drawable/qr" />
+        </RelativeLayout>
 
     </android.support.v7.widget.Toolbar>
 

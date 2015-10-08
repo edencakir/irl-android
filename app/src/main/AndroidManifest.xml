@@ -59,6 +59,9 @@
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyBZMlkOv4sj-M5JO9p6wksdax4TEjDVLgo" />
 
+        <activity
+            android:name=".ScanResultActivity"
+            android:label="@string/title_activity_scan_result"></activity>
     </application>
 
 </manifest>
