@@ -20,7 +20,9 @@ public class DataAccessGetNews {
             responseListener, Response.ErrorListener errorListener, String tag) {
         Map<String, String> parameters = new HashMap<>();
 
-        parameters.put("news", "get");
+        parameters.put("command", "300");
+        parameters.put("secureKey", "15");
+        parameters.put("ticketNumber", "1");
 
         GsonRequest<ResponseGetNews> request = new GsonRequest<>(
                 Request.Method.POST, Constants.NEWS_URL, ResponseGetNews.class,

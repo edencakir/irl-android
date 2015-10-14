@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import com.android.volley.VolleyError;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 import tr.edu.iyte.irl.irl.Adapters.NewsFragmentAdapter;
 import tr.edu.iyte.irl.irl.Model.NewsItem;
@@ -74,8 +76,10 @@ public class NewsFragment extends Fragment {
         return new Response.Listener<ResponseGetNews>() {
             @Override
             public void onResponse(ResponseGetNews response) {
-                if (response != null)
-                    response.getEventFeedList();
+                if (response != null) {
+                    List<NewsItem> list = response.getEventFeedList();
+                    Log.d("jwp", "" + list.get(2).getTitle());
+                }
                 else
                     Toast.makeText(getActivity(), "Error 101: Connection error", Toast.LENGTH_SHORT).show();
             }
@@ -86,6 +90,7 @@ public class NewsFragment extends Fragment {
         return new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                Log.d("JWp", "" + error);
                 Toast.makeText(getActivity(), "Error 102: Connection error", Toast.LENGTH_SHORT).show();
             }
         };
