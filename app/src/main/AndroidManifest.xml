@@ -2,9 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="tr.edu.iyte.irl.irl" >
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <permission
         android:name="tr.edu.iyte.irl.irl.Fragments.TransportFragment.permission.MAPS_RECEIVE"
         android:protectionLevel="signature" />

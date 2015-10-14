@@ -45,7 +45,7 @@ public class NewsFragment extends Fragment {
         recyclerView = (RecyclerView) v.findViewById(R.id.recycler_view);
     }
     private void initialize() {
-        //getNews();
+        getNews();
         layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
 

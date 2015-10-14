@@ -1,6 +1,5 @@
 package tr.edu.iyte.irl.irl;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -13,6 +12,12 @@ public class ContactActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
+
+        findViews();
+    }
+
+    private void findViews() {
+
     }
 
     @Override

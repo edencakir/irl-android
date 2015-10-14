@@ -16,6 +16,16 @@
             android:layout_height="50dp">
 
             <ImageView
+                android:id="@+id/buttonContact"
+                android:layout_width="40dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="2dp"
+                android:padding="4dp"
+                android:src="@drawable/contact" />
+
+            <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_alignParentTop="true"

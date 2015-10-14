@@ -5,10 +5,10 @@
     tools:context="tr.edu.iyte.irl.irl.ContactActivity">
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
-        android:background="@color/white"
-        android:minHeight="?attr/actionBarSize"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -16,8 +16,8 @@
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_marginRight="16dp"
                 android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
                 android:src="@drawable/logo"/>
         </LinearLayout>
 
@@ -26,60 +26,72 @@
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_below="@id/toolbar">
+        android:layout_marginRight="10dp">
         <TextView
             android:id="@+id/title_feedback"
-            android:text="Geribildirim Formu"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:textColor="#555"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
             android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="Geribildirim Formu"
+            android:textColor="#555"
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:layout_below="@id/title_feedback"
+            android:layout_marginTop="10dp"
+            android:background="#f3f3f3"
             android:hint="Ad Soyad"
             android:inputType="textCapWords"
+            android:paddingBottom="8dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="8dp"
+            android:textColor="#000"
             android:textSize="20sp"/>
         <EditText
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:layout_below="@id/name"
+            android:layout_marginTop="5dp"
+            android:background="#f3f3f3"
+            android:hint="Email"
             android:inputType="textEmailAddress"
-            android:textSize="20sp"
-            android:hint="SET ERROR Email"/>
+            android:paddingBottom="8dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="8dp"
+            android:textColor="#000"
+            android:textSize="20sp" />
         <EditText
             android:id="@+id/message"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_below="@id/email"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="4dp"
+            android:layout_marginTop="5dp"
+            android:background="#f3f3f3"
             android:gravity="top|left"
-            android:textSize="20sp"
+            android:hint="Feedback"
             android:inputType="textMultiLine|textCapSentences"
-            android:background="#ececec"
-            android:hint="Burayi duzelt..."/>
+            android:paddingBottom="8dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="8dp"
+            android:textColor="#000"
+            android:textSize="20sp" />
         <Button
             android:id="@+id/button_send"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="4dp"
             android:layout_below="@id/message"
             android:padding="15dp"
-            android:textSize="18sp"
+            android:text="Gönder"
             android:textColor="@color/white"
-            android:text="Gonder!"/>
+            android:textSize="15sp" />
 
     </RelativeLayout>
 

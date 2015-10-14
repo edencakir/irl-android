@@ -24,7 +24,7 @@ public class BaseActivity extends AppCompatActivity {
     private PagerSlidingTabStrip tabStrip;
     private BaseFragmentPagerAdapter adapter;
     private Toolbar toolbar;
-    private ImageView buttonQR;
+    private ImageView buttonQR, buttonContact;
     private String qrURL;
 
     @Override
@@ -40,6 +40,7 @@ public class BaseActivity extends AppCompatActivity {
     private void findViews() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         buttonQR = (ImageView) findViewById(R.id.buttonQR);
+        buttonContact = (ImageView) findViewById(R.id.buttonContact);
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         tabStrip = (PagerSlidingTabStrip) findViewById(R.id.tabs);
 
@@ -58,6 +59,12 @@ public class BaseActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 scanQR();
+            }
+        });
+        buttonContact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getBaseContext(), ContactActivity.class));
             }
         });
     }
