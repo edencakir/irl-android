@@ -9,11 +9,15 @@ public class NewsItem {
     @SerializedName("title")
     private String title;
 
-    @SerializedName("description")
+    @SerializedName("context")
     private String description;
 
     @SerializedName("imageUrl")
     private String imageUrl;
+
+    public NewsItem() {
+
+    }
 
     public NewsItem(String title, String description, String imageUrl) {
         this.title = title;

@@ -30,4 +30,5 @@
         </item>
     </array>
     <string name="title_activity_scan_result">ScanResultActivity</string>
+    <string name="title_activity_qr_number">QrNumber</string>
 </resources>

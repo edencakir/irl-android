@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/buttonContact"
+                android:layout_width="40dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="2dp"
+                android:padding="4dp"
+                android:src="@drawable/contact" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="100dp"
+                android:layout_marginRight="100dp"
+                android:layout_toLeftOf="@+id/buttonQR"
+                android:layout_toStartOf="@+id/buttonQR"
+                android:src="@drawable/logo" />
+
+            <ImageView
+                android:id="@+id/buttonQR"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:padding="4dp"
+                android:src="@drawable/qr" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar"
+        android:layout_margin="20dp"
+        android:layout_marginTop="64dp"
+        android:hint="FD29348X"
+        android:textColor="#000"
+        android:textSize="40sp" />
+
+    <Button
+        android:id="@+id/button_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:background="@color/white"
+        android:text="Sorgula"
+        android:textSize="20sp" />
+
+</RelativeLayout>

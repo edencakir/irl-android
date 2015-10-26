@@ -1,13 +1,18 @@
 package tr.edu.iyte.irl.irl;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,26 +20,60 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.astuetz.PagerSlidingTabStrip;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.gcm.GoogleCloudMessaging;
+
+import java.io.IOException;
 
 import tr.edu.iyte.irl.irl.Adapters.BaseFragmentPagerAdapter;
 
 // which contains viewpager, and base to categories and news
 public class BaseActivity extends AppCompatActivity {
+    public final static String VERSION_NUMBER = "1.0.5";
+    static final String TAG = "JWP";
+    private final static int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
+    GoogleCloudMessaging gcm;
+    Context context;
+    String regid;
+    String SENDER_ID = "300954823314";
     private ViewPager viewPager;
     private PagerSlidingTabStrip tabStrip;
     private BaseFragmentPagerAdapter adapter;
     private Toolbar toolbar;
     private ImageView buttonQR, buttonContact;
     private String qrURL;
+    private AlertDialog alertDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base);
-
+        context = this;
         findViews();
+        if (checkPlayServices()) {
+            new Register().execute();
+        } else {
+            Toast.makeText(getApplicationContext(), "The device is not supported!", Toast.LENGTH_LONG).show();
+        }
         initialize();
         setListeners();
+    }
+
+    private boolean checkPlayServices() {
+        int resultCode = GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
+        if (resultCode != ConnectionResult.SUCCESS) {
+            if (GooglePlayServicesUtil.isUserRecoverableError(resultCode)) {
+                GooglePlayServicesUtil.getErrorDialog(resultCode, this,
+                        PLAY_SERVICES_RESOLUTION_REQUEST).show();
+            } else {
+                Log.i(TAG, "This device is not supported.");
+                Toast.makeText(getApplicationContext(), "The device is not supported!", Toast.LENGTH_LONG).show();
+                finish();
+            }
+            return false;
+        }
+        return true;
     }
 
     private void findViews() {
@@ -48,6 +87,35 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     private void initialize() {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                context);
+
+        // set title
+        alertDialogBuilder.setTitle("");
+        alertDialogBuilder.setCancelable(true);
+        // set dialog message
+        alertDialogBuilder
+                .setMessage("QR veya Numara")
+                .setCancelable(false)
+                .setPositiveButton("QR", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // if this button is clicked, close
+                        // current activity
+                        scanQR();
+                    }
+                })
+                .setNegativeButton("Numara", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // if this button is clicked, just close
+                        // the dialog box and do nothing
+                        startActivity(new Intent(getBaseContext(), QrNumber.class));
+                    }
+                });
+
+        // create alert dialog
+        alertDialog = alertDialogBuilder.create();
+
+        // show it
         adapter = new BaseFragmentPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
         tabStrip.setViewPager(viewPager);
@@ -58,7 +126,7 @@ public class BaseActivity extends AppCompatActivity {
         buttonQR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                scanQR();
+                alertDialog.show();
             }
         });
         buttonContact.setOnClickListener(new View.OnClickListener() {
@@ -126,5 +194,28 @@ public class BaseActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    class Register extends AsyncTask<String, String, String> {
+
+        @Override
+        protected String doInBackground(String... args) {
+            try {
+                if (gcm == null) {
+                    gcm = GoogleCloudMessaging.getInstance(context);
+                    regid = gcm.register(SENDER_ID);
+                    //Log.d(TAG, regid);
+                    //Log.e(TAG, prefs.getString("REG_ID", ""));
+                }
+
+                return regid;
+
+            } catch (IOException ex) {
+                Log.e("Error", ex.getMessage());
+                return "Fails";
+
+            }
+        }
+
     }
 }

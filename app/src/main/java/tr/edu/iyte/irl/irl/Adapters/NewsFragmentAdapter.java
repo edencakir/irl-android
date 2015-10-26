@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import tr.edu.iyte.irl.irl.Model.NewsItem;
 import tr.edu.iyte.irl.irl.R;
@@ -21,10 +21,10 @@ import tr.edu.iyte.irl.irl.R;
  */
 public class NewsFragmentAdapter extends RecyclerView.Adapter<NewsFragmentAdapter.ViewHolder> {
     private Context context;
-    private ArrayList<NewsItem> items;
+    private List<NewsItem> items;
 
     //create constructor for adapter here.
-    public NewsFragmentAdapter(Context context, ArrayList<NewsItem> items) {
+    public NewsFragmentAdapter(Context context, List<NewsItem> items) {
         this.context = context;
         this.items = items;
     }
@@ -51,7 +51,7 @@ public class NewsFragmentAdapter extends RecyclerView.Adapter<NewsFragmentAdapte
                 Picasso.with(context).load(currentItem
                         .getImageUrl()).resize(500, 200).centerCrop().into(viewHolder.image);
             } else {
-                //do nothing obviously. we already have a default image.
+                viewHolder.image.setImageResource(R.drawable.placeholder);
             }
         } else {
             Toast.makeText(context, "Error 103", Toast.LENGTH_SHORT).show();

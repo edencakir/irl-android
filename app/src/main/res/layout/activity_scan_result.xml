@@ -34,7 +34,8 @@
         android:layout_below="@id/toolbar"
         android:layout_centerHorizontal="true"
         android:layout_margin="10dp"
-        android:layout_marginTop="36dp" />
+        android:layout_marginTop="36dp"
+        android:src="@drawable/placeholder" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -47,7 +48,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:id="@+id/cell1"
@@ -70,7 +71,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="DUMMYajkdfajsdfk"
+                    android:text=""
                     android:textSize="25sp" />
 
             </LinearLayout>
@@ -97,7 +98,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="1.032 kg"
+                    android:text=""
                     android:textSize="25sp" />
 
             </LinearLayout>
@@ -124,7 +125,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="Cizgi Izleyen"
+                    android:text=""
                     android:textSize="25sp" />
 
             </LinearLayout>
@@ -151,7 +152,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="00349193849392"
+                    android:text=""
                     android:textSize="25sp" />
 
             </LinearLayout>
@@ -178,7 +179,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="Blizzard"
+                    android:text=""
                     android:textSize="25sp" />
 
             </LinearLayout>
@@ -205,7 +206,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="info@blizzard.com"
+                    android:text=""
                     android:textSize="25sp" />
 
             </LinearLayout>
@@ -223,7 +224,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="Takim Tel No:"
+                    android:text=""
                     android:textSize="25sp"
                     android:textStyle="bold" />
 
@@ -232,7 +233,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="+90 504 283 22 11"
+                    android:text=""
                     android:textSize="25sp" />
 
             </LinearLayout>
@@ -259,7 +260,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="Kayitli"
+                    android:text=""
                     android:textSize="25sp" />
 
             </LinearLayout>
